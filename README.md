@@ -1,14 +1,3 @@
----
-title: Car Damage Detector
-emoji: 🚗
-colorFrom: blue
-colorTo: indigo
-sdk: streamlit
-sdk_version: 1.42.2
-app_file: main.py
-pinned: false
----
-
 # Car Damage Detector 🚗
 
 This is a **Deep Learning-based Car Damage Detection App** using ResNet50.
