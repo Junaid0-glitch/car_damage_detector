@@ -91,27 +91,14 @@ This confirms that **transfer learning is essential** for small/medium‑sized v
 
 * **Hugging Face Spaces** (API + Model Hosting)
 
----
-
-## 🚀 Live Demo & Models
-
-> Model files are hosted on Hugging Face due to GitHub file size limitations.
-
-* 🔗 **Live Streamlit App**
-  [https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/](https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/)
-
-* 🤗 **Hugging Face Repository (Models & API)**
-  [https://huggingface.co/spaces/junaid17/car_damage_detector/tree/main](https://huggingface.co/spaces/junaid17/car_damage_detector/tree/main)
-
----
-
 ## 🖼️ Screenshots
 
-> Add screenshots after deployment
-
 ```
-📸 Screenshot 1 – Streamlit UI (Image Upload & Prediction)
-📸 Screenshot 2 – Detection + Classification Output
+📸 <img width="1390" height="741" alt="image" src="https://github.com/user-attachments/assets/240383b0-ff5b-4de5-b4cf-0eed36f3a6fb" />
+
+📸 <img width="1505" height="675" alt="image" src="https://github.com/user-attachments/assets/1f2112fd-5b9d-4cfe-baaa-de049b9789b0" />
+
+📸 <img width="1119" height="842" alt="image" src="https://github.com/user-attachments/assets/a5877b84-fa94-4770-b8f1-b3449baa4b58" />
 ```
 
 ---
