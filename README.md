@@ -93,9 +93,6 @@ This confirms that **transfer learning is essential** for small/medium‑sized v
 
 ## 🖼️ Screenshots
 
-
-## 🖼️ Screenshots
-
 ### 🔹 Streamlit Web Interface
 <img src="https://github.com/user-attachments/assets/240383b0-ff5b-4de5-b4cf-0eed36f3a6fb" width="100%" />
 
