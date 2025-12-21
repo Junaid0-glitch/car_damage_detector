@@ -93,13 +93,22 @@ This confirms that **transfer learning is essential** for small/medium‑sized v
 
 ## 🖼️ Screenshots
 
-```
-📸 <img width="1390" height="741" alt="image" src="https://github.com/user-attachments/assets/240383b0-ff5b-4de5-b4cf-0eed36f3a6fb" />
 
-📸 <img width="1505" height="675" alt="image" src="https://github.com/user-attachments/assets/1f2112fd-5b9d-4cfe-baaa-de049b9789b0" />
+## 🖼️ Screenshots
 
-📸 <img width="1119" height="842" alt="image" src="https://github.com/user-attachments/assets/a5877b84-fa94-4770-b8f1-b3449baa4b58" />
-```
+### 🔹 Streamlit Web Interface
+<img src="https://github.com/user-attachments/assets/240383b0-ff5b-4de5-b4cf-0eed36f3a6fb" width="100%" />
+
+---
+
+### 🔹 Damage Detection & Classification Output
+<img src="https://github.com/user-attachments/assets/1f2112fd-5b9d-4cfe-baaa-de049b9789b0" width="100%" />
+
+---
+
+### 🔹 API Response & Bounding Boxes
+<img src="https://github.com/user-attachments/assets/a5877b84-fa94-4770-b8f1-b3449baa4b58" width="100%" />
+
 
 ---
 
