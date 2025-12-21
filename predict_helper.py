@@ -62,7 +62,7 @@ transform = transforms.Compose([
     )
 ])
 
-# here
+# here i took the help of ai to write code to replace the yolo conf and label with resnet label and conf
 
 def predict_damage(image: Image.Image):
     image = image.convert("RGB")
@@ -98,3 +98,4 @@ def predict_damage(image: Image.Image):
         "confidence": round(conf.item(), 4),
         "bboxes": bboxes
     }
+
