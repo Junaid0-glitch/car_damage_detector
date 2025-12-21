@@ -1,18 +1,45 @@
-# Car Damage Detector 🚗
+# 🚗 Car Damage Detection & Classification System
 
-A **Deep Learning-based Car Damage Detection App** that identifies different types of car damage from images using a ResNet50 model. Built with PyTorch and Streamlit, this app offers a user-friendly interface for fast and accurate predictions.
+🔗 **Live Streamlit App**: [https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/](https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/)
 
-### 🌐 Live Demo
-
-👉 [Streamlit App](https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/)
-
-![App Screenshot](https://github.com/user-attachments/assets/47bc2549-4662-4dcc-b807-07db30678a32)
+🤗 **Hugging Face Repository (Models + API)**: [https://huggingface.co/spaces/junaid17/car_damage_detector/tree/main](https://huggingface.co/spaces/junaid17/car_damage_detector/tree/main)
 
 ---
 
-## 🧠 Model Overview
+An end‑to‑end **Computer Vision application** that automatically **detects car damage regions** and **classifies the type of damage** using a **YOLO + ResNet18 hybrid architecture**. The system is fully productionized with an **API backend**, **Streamlit frontend**, and **cloud deployment on Hugging Face**.
 
-The model classifies images into the following six categories:
+---
+
+## 🔍 Project Overview
+
+This project solves a real‑world insurance and automotive inspection problem by answering two key questions from a single car image:
+
+1. **Where is the damage?** → Object detection using **YOLO**
+2. **What type of damage is it?** → Image classification using **ResNet‑18**
+
+The pipeline first detects damage regions (bounding boxes) and then classifies the damage type, producing a clean, interpretable output suitable for insurance automation, vehicle inspection, and claim validation systems.
+
+---
+
+## 🧠 Architecture
+
+```
+Input Image
+    │
+    ├──► YOLO (Damage Detection)
+    │        └── Bounding Boxes + Confidence
+    │
+    └──► ResNet‑18 (Damage Classification)
+             └── Damage Type + Confidence
+
+Final Output → JSON + Visual Overlay
+```
+
+---
+
+## 🏷️ Damage Classes
+
+The classifier is trained on **6 damage categories**:
 
 * `F_Breakage`
 * `F_Crushed`
@@ -21,40 +48,149 @@ The model classifies images into the following six categories:
 * `R_Crushed`
 * `R_Normal`
 
-### 📊 Model Progression & Accuracy
+(F = Front, R = Rear)
 
-| Model Description                       | Accuracy (%) |
-| --------------------------------------- | ------------ |
-| CNN (Custom from scratch)               | 47           |
-| Transfer Learning: EfficientNet         | 71           |
-| Transfer Learning: EfficientNet B4      | 65           |
-| **Transfer Learning: ResNet50** (Final) | **80**       |
+---
 
-### ✅ Final Validation Results (ResNet50)
+## 📊 Model Performance (Summary)
+
+### Custom CNN (Baseline)
+
+* Underfitting observed
+* Limited generalization on validation data
+
+### Transfer Learning (ResNet‑18)
+
+* **~74% validation accuracy**
+* Strong improvement in precision, recall, and F1‑score
+* Robust performance across all damage classes
+
+This confirms that **transfer learning is essential** for small/medium‑sized vision datasets.
+
+---
+
+## 🛠️ Tech Stack
+
+### Core
+
+* **Python 3.10+**
+* **PyTorch**
+* **Torchvision**
+* **Ultralytics YOLOv8**
+
+### Backend
+
+* **FastAPI** (Inference API)
+* **Pydantic** (Schema validation)
+
+### Frontend
+
+* **Streamlit** (Interactive UI)
+
+### Deployment
+
+* **Hugging Face Spaces** (API + Model Hosting)
+
+---
+
+## 🚀 Live Demo & Models
+
+> Model files are hosted on Hugging Face due to GitHub file size limitations.
+
+* 🔗 **Live Streamlit App**
+  [https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/](https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/)
+
+* 🤗 **Hugging Face Repository (Models & API)**
+  [https://huggingface.co/spaces/junaid17/car_damage_detector/tree/main](https://huggingface.co/spaces/junaid17/car_damage_detector/tree/main)
+
+---
+
+## 🖼️ Screenshots
+
+> Add screenshots after deployment
 
 ```
-              precision    recall  f1-score   support
-
-  F_Breakage       0.88      0.83      0.86       100
-   F_Crushed       0.77      0.72      0.74        82
-    F_Normal       0.82      0.92      0.87        89
-  R_Breakage       0.71      0.86      0.78        64
-   R_Crushed       0.72      0.70      0.71        66
-    R_Normal       0.88      0.71      0.79        59
-
-    accuracy                           0.80       460
-   macro avg       0.80      0.79      0.79       460
-weighted avg       0.80      0.80      0.80       460
+📸 Screenshot 1 – Streamlit UI (Image Upload & Prediction)
+📸 Screenshot 2 – Detection + Classification Output
 ```
 
 ---
 
-## 🚀 Features
+## 📦 API Output Format
 
-* 🔍 Detects different types of **car damage** (front/rear, breakage/crushed/normal).
-* 🧠 Powered by **ResNet50** and **PyTorch**.
-* 🎯 Achieves **\~80% validation accuracy** on real-world data.
-* 🖼️ Easy-to-use **Streamlit web interface**.
-* 💾 Model stored as `save_model.pth`.
+```json
+{
+  "damage_detected": true,
+  "damage_type": "F_Breakage",
+  "confidence": 0.87,
+  "bboxes": [
+    {
+      "bbox": [x1, y1, x2, y2],
+      "confidence": 0.91
+    }
+  ]
+}
+```
 
 ---
+
+## 🧪 Key Features
+
+* ✅ Hybrid **Detection + Classification** pipeline
+* ✅ Transfer learning with ResNet‑18
+* ✅ YOLO‑based spatial localization
+* ✅ REST API for easy integration
+* ✅ Interactive Streamlit frontend
+* ✅ Cloud‑deployed and production‑ready
+
+---
+
+## 📁 Project Structure (High‑Level)
+
+```
+car-damage-detector/
+│
+├── app.py                  # FastAPI entry point
+├── predict_helper.py       # YOLO + ResNet inference logic
+├── models/                 # (Hosted on Hugging Face)
+├── main.py        # Frontend UI
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 💡 Use Cases
+
+* 🚘 Insurance claim automation
+* 🔍 Vehicle inspection systems
+* 🧾 Damage assessment & reporting
+* 🧠 AI‑powered automotive analytics
+
+---
+
+## 📌 Future Improvements
+
+* Instance‑level classification per bounding box
+* Damage severity estimation (minor / major)
+* Multi‑angle image support
+* Mobile‑friendly frontend
+
+---
+
+## 👨‍💻 Author
+
+**Juddy**
+AI / ML Engineer | Data Science & Computer Vision
+
+---
+
+## ⭐ Acknowledgements
+
+* PyTorch & Torchvision Team
+* Ultralytics YOLO
+* Hugging Face Spaces
+
+---
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
