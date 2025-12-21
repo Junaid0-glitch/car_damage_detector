@@ -1,6 +1,6 @@
 # 🚗 Car Damage Detection & Classification System
 
-🔗 **Live Streamlit App**: [https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/](click_here)
+🔗 **Live Streamlit App**: [https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/](https://cardamagedetector-e3smtwusr8p8kmhywkq7zy.streamlit.app/)
 
 🤗 **Hugging Face Repository (Models + API)**: [https://huggingface.co/spaces/junaid17/car_damage_detector/tree/main](https://huggingface.co/spaces/junaid17/car_damage_detector/tree/main)
 
