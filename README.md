@@ -85,7 +85,7 @@ This confirms that **transfer learning is essential** for small/medium‑sized v
 
 ### Frontend
 
-* **Streamlit** (Interactive UI)
+* **HTML, CSS, JS** (Interactive UI)
 
 ### Deployment
 
